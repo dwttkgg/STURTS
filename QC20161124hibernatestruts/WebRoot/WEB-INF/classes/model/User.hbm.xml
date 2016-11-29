@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="model">
+  <!-- 配置类和表 -->
+  <class name="User" table="t_User">
+  	
+    <!-- 配置主键 -->
+    <id name="id" type="int" column="id">
+      <generator class="native"/>
+      
+      
+    </id>
+    <!-- 配置其它属性 -->
+    <property name="username" column="username" not-null="true" type="java.lang.String"/>
+    <property name="pwd" column="pwd"  type="java.lang.String"/>
+    <property name="birthday" column="birthday" not-null="true" type="java.util.Date"/>
+
+  </class>
+</hibernate-mapping>

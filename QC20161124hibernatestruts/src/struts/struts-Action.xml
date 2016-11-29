@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="new" namespace="/new" extends="struts-default">
+        <action name="action" class="struts.strutsAction">
+			<result name="addsuccess" type="chain">
+				<param name="namespace">/new1</param>
+				<param name="actionName">action1</param>
+			</result>
+			
+			<result name="error">/index.jsp</result>
+			<result name="delsuccess" type="chain">
+				<param name="namespace">/new1</param>
+				<param name="actionName">action1</param>
+			</result>
+		</action>      
+    </package>
+     <package name="new1" namespace="/new1" extends="struts-default">
+        <action name="action1" class="struts.strutsAction">
+			<result name="list">/list.jsp</result>
+		</action>      
+    </package>
+
+    <!-- Add packages here -->
+
+</struts>

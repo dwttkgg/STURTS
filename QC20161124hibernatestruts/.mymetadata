@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="QC20161124hibernatestruts"
+  id="myeclipse.1479972674110"
+  context-root="/QC20161124hibernatestruts"
+  j2ee-spec="5.0"
+  archive="QC20161124hibernatestruts.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

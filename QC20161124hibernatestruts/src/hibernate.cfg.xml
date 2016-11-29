@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+		<!-- 连接的数据库的信息 -->
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/hibernate</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">sheng1230</property>
+		
+        <!-- SQL dialect -->
+        <!-- 配置数据库的方言
+        	指明使用的是哪种数据库
+        	最终生成对应数据库的sql语句
+         -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <!-- 使用getCurrentSession()方法做的配置 -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <!-- 是否将sql语句打印到控制台 -->
+        <property name="show_sql">true</property>
+		
+		<!-- 加载hibernate映射文件 -->
+        <!--<mapping resource="model/Classes.hbm.xml"/>
+        <mapping resource="model/Student.hbm.xml"/>      
+        
+         <mapping resource="onetoone/ICard.hbm.xml"/>
+         <mapping resource="onetoone/Person.hbm.xml"/>
+ -->
+ 		 <mapping resource="model/User.hbm.xml"/>  
+ 		 
+    </session-factory>
+
+</hibernate-configuration>

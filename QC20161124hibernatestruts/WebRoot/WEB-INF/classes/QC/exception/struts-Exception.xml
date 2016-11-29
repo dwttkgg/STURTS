@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+			
+		<action name="exceptionAction"
+			   class="QC.exception.ExceptionAction">
+			<exception-mapping result="exception" exception="QC.exception.Myexception"></exception-mapping>
+			<result>/index.jsp</result>
+			<result name="error">/addUser.jsp</result>	
+			<result name="exception">/exception.jsp</result>   
+		</action>	
+	</package>
+
+    <!-- Add packages here -->
+
+</struts>
